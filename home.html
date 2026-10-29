@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binerun</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 </head>
 <body>
-<header class="site-header">
-  <nav class="navbar">
-    <!-- Logo -->
-    <a href="#" class="logo">Bine<span>run</span></a>
+<nav class="navbar">
+        <div class="navbar-container">
+            
+            <!-- Logo Section -->
+            <a href="#" class="navbar-brand">
+                <div class="logo-icon">
+                    <span></span>
+                </div>
+                <span class="brand-name">Binerun</span>
+            </a>
 
-    <!-- Checkbox untuk Toggle Menu Mobile (Tanpa JS) -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+            <!-- Burger Bar Button (HP & Tablet) -->
+            <button class="burger-toggle" id="burgerToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars" id="burgerIcon"></i>
+            </button>
 
-    <!-- Daftar Link Menu -->
-    <ul class="nav-links">
-      <li><a href="#" aria-current="page">Home</a></li>
-      <li><a href="materi.html">Materi</a></li>
-      <li><a href="latihan.html">Latihan</a></li>
-      <li><a href="about.html">Ini Kita</a></li>
-    </ul>
-  </nav>
-</header>
+            <!-- Navigation Menu (Dropdown di HP/Tablet) -->
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="nav-links">
+                    <li><a href="#jalur-level" class="nav-item active">Jalur Level</a></li>
+                    <li><a href="#latihan-konversi" class="nav-item">Latihan Konversi</a></li>
+                    <li><a href="#tabel-referensi" class="nav-item">Tabel Referensi</a></li>
+                </ul>
+
+                <!-- Action Button -->
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-login">Log In</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
 
     <script src="home.js"></script>
 </body>

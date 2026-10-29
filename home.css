@@ -1,90 +1,167 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+    background-color: #f8fafc;
 }
 
-.site-header {
-  background-color: #333;
-  color: #fff;
-}
-
+/* Navbar Wrapper */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1.5px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-.logo span {
-  color: #00bcd4;
+/* Logo Binerun */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b2ff43;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #b2ff43;
+}
+
+/* Desktop Menu Layout */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #00bcd4;
-}
-
-/* Sembunyikan checkbox dan tombol hamburger di layar desktop */
-.nav-toggle, .nav-burger {
-  display: none;
-}
-
-/* Responsif untuk Layar Mobile */
-@media (max-width: 768px) {
-  .nav-burger {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-
-  .nav-burger span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: 0.3s;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    flex-direction: column;
     align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
-
-  .nav-toggle:checked ~ .nav-links {
-    max-height: 300px;
-    padding: 1rem 0;
-  }
+    gap: 32px;
+    list-style: none;
 }
+
+.nav-item {
+    text-decoration: none;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #65a30d;
+}
+
+.nav-item.active {
+    color: #0f172a;
+}
+
+/* Button Log In */
+.btn-login {
+    display: inline-block;
+    background-color: #b2ff43;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #9ef02b;
+    transform: translateY(-1px);
+}
+
+/* Burger Bar Button (Tersembunyi di Desktop) */
+.burger-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #0f172a;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* RESPONSIVE LAYOUT (Tablet & HP: Breakpoint 1024px ke bawah) */
+@media (max-width: 1024px) {
+    .burger-toggle {
+        display: block; /* Tampilkan burger bar */
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        border-bottom: 1.5px solid #e2e8f0;
+        gap: 20px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        
+        /* Efek tersembunyi default */
+        display: none;
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Tampilkan saat burger bar diklik */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .nav-item {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-actions {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .btn-login {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+    }
+}
+

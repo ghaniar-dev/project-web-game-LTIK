@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Create Account</title>
+    <!-- CSS khusus Sign Up -->
+    <link rel="stylesheet" href="signup.css">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">Create Account</h1>
+        <p class="subtitle">Please enter your details to sign up.</p>
+
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user icon-left"></i>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope icon-left"></i>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="signupPassword">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock icon-left"></i>
+                    <input type="password" id="signupPassword" placeholder="••••••••" required>
+                    <i class="fa-regular fa-eye icon-toggle" id="toggleSignupPassword"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+
+        <div class="divider">
+            <span>or continue with</span>
+        </div>
+
+        <div class="social-buttons">
+            <button type="button" class="btn btn-social">
+                <i class="fa-brands fa-google"></i>
+                Continue with Google
+            </button>
+            <button type="button" class="btn btn-social">
+                <i class="fa-brands fa-github"></i>
+                Continue with GitHub
+            </button>
+        </div>
+
+        <div class="switch-auth">
+            Already have an account? <a href="login.html">Log In</a>
+        </div>
+    </div>
+
+    <!-- JS khusus Sign Up -->
+    <script src="signup.js"></script>
+</body>
+</html>
